@@ -1,7 +1,7 @@
 import gymnasium as gym
 from gymnasium import spaces
 import numpy as np
-from stable_baselines3 import PPO
+from stable_baselines3 import DQN, PPO
 
 
 
@@ -100,17 +100,17 @@ if __name__ == '__main__':
     # Create your custom environment
     env = CustomEnv(render_mode="human")
     
-    # Initialize the PPO model with MLP policy
-    model = PPO("MlpPolicy", env, verbose=1)
+    # Initialize the model 
+    model = PPO("MlpPolicy", env, verbose=1)    # replace MlpPolicy to CnnPolicy if state is an image
 
     # Train the agent
     model.learn(total_timesteps=10_000)
 
     # Save the trained model
-    model.save("ppo_cartpole")
+    model.save("ppo_template")
 
     # Load the trained model
-    model = PPO.load("ppo_cartpole")
+    model = PPO.load("ppo_template")
 
     # Evaluate the trained agent
     obs, info = env.reset()
