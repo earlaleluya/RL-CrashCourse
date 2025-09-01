@@ -1,7 +1,7 @@
 import numpy as np
-from examples.python.state import State
-from examples.python.q import Q
-from examples.python.sarsa import SARSA
+from examples.python.cartpole_from_scratch.state import State
+from examples.python.cartpole_from_scratch.q import Q
+from examples.python.cartpole_from_scratch.sarsa import SARSA
 
 
 class Agent:

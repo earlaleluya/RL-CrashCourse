@@ -24,6 +24,7 @@ class Q:
 
 
     def update(self, state, action, next_state, next_reward):
+        self.alpha = 1.0
         if next_state < 0:    # fail
             self.Q[state,action] = ((1-self.alpha)*(self.Q[state,action])) + (self.alpha*(next_reward+(self.gamma*0)))
         else:   # no fail

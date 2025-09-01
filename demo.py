@@ -1,4 +1,4 @@
-from examples.python.cartpole_simulation import CartPoleSimulation
+from examples.python.cartpole_from_scratch.cartpole_simulation import CartPoleSimulation
 import matplotlib.pyplot as plt
 import argparse
 

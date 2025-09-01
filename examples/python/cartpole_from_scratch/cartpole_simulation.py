@@ -1,8 +1,8 @@
-from examples.python.environment import Environment
-from examples.python.state import State
-from examples.python.reward import Reward
-from examples.python.action import Action
-from examples.python.agent import Agent
+from examples.python.cartpole_from_scratch.environment import Environment
+from examples.python.cartpole_from_scratch.state import State
+from examples.python.cartpole_from_scratch.reward import Reward
+from examples.python.cartpole_from_scratch.action import Action
+from examples.python.cartpole_from_scratch.agent import Agent
 
 
 class CartPoleSimulation:
