@@ -127,11 +127,11 @@ if __name__ == '__main__':
     env = CustomEnv(render_mode="human")
     render_callback = RenderCallback(render_freq=1)
     
-    model = PPO("CnnPolicy", env, verbose=1)
+    model = DQN("CnnPolicy", env, verbose=1)
     model.learn(total_timesteps=10_000, callback=render_callback)  
     model.save("examples/python/cartpole_from_gym/ppo_cartpole_img")
     
-    model = PPO.load("examples/python/cartpole_from_gym/ppo_cartpole_img")
+    model = DQN.load("examples/python/cartpole_from_gym/ppo_cartpole_img")
     
     obs, info = env.reset()
     for _ in range(1000):
